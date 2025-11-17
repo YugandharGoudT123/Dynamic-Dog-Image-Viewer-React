@@ -1,0 +1,66 @@
+/* 🔥 CRITICAL FIX FOR REACT (DO NOT REMOVE) */
+/* Background gradient + global font */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  /* 🌈 Modern gradient background */
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+
+  /* ✍️ Improved font */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Load Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Header Section */
+.header {
+  text-align: center;
+  padding: 20px 0;
+  background: #f9f9f9;
+}
+
+.header h1 {
+  margin: 0 0 10px 0;
+}
+
+.header select {
+  font-size: 1rem;
+  padding: 8px;
+}
+
+/* Slideshow Container */
+.slideshow {
+  flex: 1;
+  background-color: #333;
+  position: relative;
+  overflow: hidden;
+
+  /* Helps ensure it's visible even if parent shrinks */
+  min-height: 400px;
+}
+
+/* Individual Slides */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.9s ease-out;
+}
+
+/* The second-to-last slide (newest visible slide) */
+.slide:nth-last-child(2) {
+  opacity: 1;
+  transform: scale(1.08);
+}
