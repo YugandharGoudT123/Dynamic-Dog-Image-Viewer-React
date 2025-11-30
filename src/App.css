@@ -64,3 +64,143 @@ html, body, #root {
   opacity: 1;
   transform: scale(1.08);
 }
+
+/* ---------- Layout container ---------- */
+.container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* ---------- Navbar ---------- */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav button {
+  background: #ff7a59;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.nav .spacer {
+  flex: 1 1 auto;
+}
+
+/* ---------- Auth pages (Login / Signup) ---------- */
+.auth {
+  width: 100%;
+  max-width: 480px;
+  margin: 36px auto;
+  background: rgba(255,255,255,0.95);
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.auth h2 {
+  margin: 0 0 8px 0;
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.12);
+  font-size: 1rem;
+}
+
+.auth button {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg,#ff7a59,#ff9a76);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth .error {
+  color: #a80000;
+  background: #fff2f2;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.auth p {
+  margin: 8px 0 0 0;
+}
+
+/* ---------- App + header ---------- */
+.app {
+  min-height: calc(100vh - 72px);
+}
+
+.header {
+  text-align: center;
+  padding: 28px 0 12px 0;
+  background: transparent;
+  color: #222;
+}
+
+.header h1 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+}
+
+.header select {
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+/* ---------- Slideshow tweaks ---------- */
+.slideshow {
+  max-width: 980px;
+  margin: 18px auto 56px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 420px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.06));
+  box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+  position: relative;
+}
+
+.slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .header h1 { font-size: 20px; }
+  .auth { margin: 20px 12px; padding: 16px; }
+  .slideshow { min-height: 260px; }
+}
+
