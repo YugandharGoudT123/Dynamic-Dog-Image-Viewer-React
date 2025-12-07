@@ -55,24 +55,44 @@ function Home() {
   }
 
   return (
-    <div className="app">
-      <div className="header">
-        <h1>Infinite Dog App (React)</h1>
-
-        <select onChange={(e) => loadByBreed(e.target.value)}>
-          <option>Choose a dog breed</option>
-          {Object.keys(breeds).map((breed) => (
-            <option key={breed}>{breed}</option>
-          ))}
-        </select>
+    <div>
+      <div className="project-info-banner">
+        <div className="project-info-content">
+          <div className="project-info-text">
+            <h3>📱 Dynamic Dog Image Viewer</h3>
+            <p>
+              This project implements the Lewis Instructional Software Architecture Phase 3 reference app — a React static site deployed to the cloud with Google authentication and NoSQL/file storage.
+            </p>
+            <div className="team-section">
+              <h4>👥 Team Members:</h4>
+              <ul className="team-list-inline">
+                <li>Sahithi Reddy Musuku</li>
+                <li>Yugandhar Goud Thalla</li>
+                <li>Abhishek Anand Makka</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+      <div className="app">
+        <div className="header">
+          <h1>Infinite Dog App (React)</h1>
 
-      <div className="slideshow">
-        {images.map((url, i) =>
-          url ? (
-            <div key={i} className="slide" style={{ backgroundImage: `url(${url})` }}></div>
-          ) : null
-        )}
+          <select onChange={(e) => loadByBreed(e.target.value)}>
+            <option>Choose a dog breed</option>
+            {Object.keys(breeds).map((breed) => (
+              <option key={breed}>{breed}</option>
+            ))}
+          </select>
+        </div>
+
+        <div className="slideshow">
+          {images.map((url, i) =>
+            url ? (
+              <div key={i} className="slide" style={{ backgroundImage: `url(${url})` }}></div>
+            ) : null
+          )}
+        </div>
       </div>
     </div>
   );

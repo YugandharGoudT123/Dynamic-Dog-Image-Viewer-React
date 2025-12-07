@@ -12,6 +12,8 @@ function Navbar() {
       <div className="spacer" />
       {user ? (
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <Link to="/files">📁 Files</Link>
+          <Link to="/history">Login History</Link>
           <span>{user.email}</span>
           <button onClick={() => logout()}>Sign Out</button>
         </div>
